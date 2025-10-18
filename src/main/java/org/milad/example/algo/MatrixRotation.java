@@ -13,9 +13,12 @@ public class MatrixRotation {
                 matrix[j][i] = temp;
             }
         }
-
         printMatrix(matrix);
         // Step 2: Reverse each row
+        clockwise(matrix, n);
+    }
+
+    private static void clockwise(int[][] matrix, int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n / 2; j++) {
                 System.err.println("i: " + i + " j: " + j);
@@ -24,6 +27,18 @@ public class MatrixRotation {
                 matrix[i][n - 1 - j] = temp;
             }
 
+            System.err.println();
+        }
+    }
+
+    private static void counterClockwise(int[][] matrix, int n) {
+        for (int j = 0; j < n; j++) {          // iterate over each column
+            for (int i = 0; i < n / 2; i++) {  // swap elements top <-> bottom
+                System.err.println("i: " + i + " j: " + j);
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[n - 1 - i][j];
+                matrix[n - 1 - i][j] = temp;
+            }
             System.err.println();
         }
     }
@@ -55,4 +70,6 @@ public class MatrixRotation {
         System.out.println("After 90° Clockwise Rotation:");
         printMatrix(matrix);
     }
+
+    counter
 }
