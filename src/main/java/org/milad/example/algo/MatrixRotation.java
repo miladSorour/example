@@ -71,5 +71,4 @@ public class MatrixRotation {
         printMatrix(matrix);
     }
 
-    counter
 }
