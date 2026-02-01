@@ -1,4 +1,4 @@
-package org.milad.example.algo;
+package org.milad.example.algo.matrix;
 
 public class MergeMatrix {
     public static void main(String[] args) {
