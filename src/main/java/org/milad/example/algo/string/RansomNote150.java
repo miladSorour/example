@@ -1,4 +1,4 @@
-package org.milad.example.algo;
+package org.milad.example.algo.string;
 
 public class RansomNote150 {
 
